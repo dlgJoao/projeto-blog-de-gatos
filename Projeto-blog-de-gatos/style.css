@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-decoration: none;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-base-white: #F4FCFF;
+  --color-base-gray-text: #121214;
+  --color-base-gray-title: #202024;
+  --color-base-blue: #387E96;
+  --color-base-blue-search: #2d96b9;
+
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--color-base-white);
+  color: var(--color-base-gray-text);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app header, .app footer {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  padding: 1.2rem 3rem;
+
+  background-color: var(--color-base-blue);
+}
+
+.search-bar {
+  flex: 1;
+}
+
+.input-wrapper label{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1rem;
+
+  background-color: var(--color-base-blue-search);
+  color: var(--color-base-white);
+
+  border: none;
+  border-radius: .8rem;
+
+  font-size: 1.6rem;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--color-base-white);
+}
+
+.input-wrapper input:focus {
+  outline: 1px solid var(--color-base-white);
+}
+
+.account-image {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+main {
+  overflow-y: scroll;
+}
+
+.post-container .post-image {
+  width: 100%;
+}
+
+.post-container figcaption, .articles-container{
+  padding: 0 2.2rem;
+}
+
+.post-container figcaption h1, .articles-container h1 {
+  color: var(--color-base-gray-title);
+
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 160%;
+
+  margin-bottom: .8rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.2rem;
+
+  margin-bottom: 3.1rem;
+}
+
+.articles-container{
+  margin-top: 3.4rem;
+}
+
+.articles-container h1{
+  margin-bottom: 3.2rem;
+}
+
+.articles {
+  display: flex;
+  padding: 1.6rem;
+
+  gap: 1.6rem;
+}
+
+.details {
+  width: 100%;
+}
+
+.details h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 160%;
+  color: var(--color-base-gray-title);
+
+  margin-bottom: 1.6rem;
+}
+
+footer {
+  font-weight: 600;
+  color: var(--color-base-white);
+  justify-content: center;
+}
+
+
+@media (min-width: 700px) {
+  
+  header {
+    padding: 0 11.2rem;
+  }
+
+  main {
+    margin: 4.4rem 12.2rem;
+  }
+}
